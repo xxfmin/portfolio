@@ -13,7 +13,7 @@ export default function Experience() {
             key={`${experience.company}-${index}`}
             className="flex items-center"
           >
-            <div className="text-[0.8125rem] uppercase text-zinc-500 shrink-0 w-40 tracking-wide font-mono">
+            <div className="text-[0.8125rem] uppercase text-secondary/85 shrink-0 w-40 tracking-wide font-mono">
               {experience.date}
             </div>
             <div className="flex items-center gap-2 flex-1">
