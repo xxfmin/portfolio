@@ -11,28 +11,28 @@ export default function Experience() {
         {experiences.map((experience, index) => (
           <div
             key={`${experience.company}-${index}`}
-            className="flex items-center gap-2 sm:gap-3"
+            className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0"
           >
-            <div className="text-[0.75rem] sm:text-[0.8125rem] uppercase text-secondary/85 shrink-0 w-28 sm:w-40 tracking-wide font-mono">
-              {experience.date}
-            </div>
-            <div className="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
-              <span className="text-secondary text-sm sm:text-base whitespace-nowrap">{experience.title} at </span>
-              <div className="group flex items-center gap-1.5 sm:gap-2 min-w-0">
+            <div className="flex items-center gap-2 flex-1 order-1 sm:order-2">
+              <span className="text-secondary">{experience.title} at </span>
+              <div className="group flex items-start gap-2">
                 <Image
                   src={experience.logo}
                   alt={`${experience.company} logo`}
                   width={200}
                   height={200}
-                  className="rounded-sm h-4 w-4 sm:h-4.5 sm:w-4.5 cursor-pointer shrink-0"
+                  className="rounded-sm h-4.5 w-4.5 cursor-pointer"
                 />
                 <Link
                   href={experience.companyUrl}
-                  className="group-hover:underline transition-all text-sm sm:text-base whitespace-nowrap truncate"
+                  className="group-hover:underline transition-all"
                 >
                   {experience.company}
                 </Link>
               </div>
+            </div>
+            <div className="text-[0.8125rem] uppercase text-secondary/85 tracking-wide font-mono order-2 sm:order-1 sm:shrink-0 sm:w-40">
+              {experience.date}
             </div>
           </div>
         ))}
