@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
           </div>
         </SmoothScroll>
         <Analytics />
+        <GoogleAnalytics gaId="G-0X9X458532" />
       </body>
     </html>
   );
