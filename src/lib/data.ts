@@ -45,6 +45,12 @@ export interface ProjectProps {
 
 export const projects: ProjectProps[] = [
   {
+    title: "ucfSpots",
+    description:
+      "Find open classrooms for studying at UCF with live building availability.",
+    slug: "ucf-spots",
+  },
+  {
     title: "MCP Doc Server",
     description:
       "Local MCP server with semantic search for AI agents to access personal docs. Search over my own stuff for better context.",
