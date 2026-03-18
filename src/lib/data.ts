@@ -1,4 +1,4 @@
-interface ExperienceProps {
+export interface ExperienceProps {
   company: string;
   title: string;
   date: string;
@@ -47,24 +47,25 @@ export const projects: ProjectProps[] = [
   {
     title: "ucfSpots",
     description:
-      "Find open classrooms for studying at UCF with live building availability.",
+      "Live classroom availability for UCF students to find open study spots across campus. Reached 3,500+ users in the first month.",
     slug: "ucf-spots",
   },
   {
     title: "MCP Doc Server",
     description:
-      "Local MCP server with semantic search for AI agents to access personal docs. Search over my own stuff for better context.",
+      "Fully local MCP server for semantic document search. Index PDFs, HTML, and Markdown with vector embeddings for LLM access to project-specific context.",
     slug: "mcp-doc-server",
   },
   {
     title: "Delta Palette",
     description:
-      "A colorblind-focused accessibility tool that generates clearer color palettes by leveraging the perceptual uniformity of Oklab and distance-maximization.",
+      "Colorblind accessibility tool using Oklab and distance-maximization to generate palettes distinguishable for people with color vision deficiency.",
     slug: "delta-palette",
   },
   {
     title: "Sous",
-    description: "Multi-agent AI system for personalized cooking assistance.",
+    description:
+      "Multi-agent AI cooking assistant that personalizes recipes based on identified ingredients from images, dietary restrictions, and cooking preferences.",
     slug: "sous",
   },
 ];
@@ -101,14 +102,14 @@ export const songs: Song[] = [
     bg: "223311",
   },
   {
-    audioSrc: "/songs/otro-atardecer.mp3",
-    coverImage: "/songs/otro-atardecer.jpeg",
-    artist: "Bad Bunny, The Marías",
-    title: "Otro Atardecer",
-    startTime: 26.75,
+    audioSrc: "/songs/fantasmas.mp3",
+    coverImage: "/songs/fantasmas.jpeg",
+    artist: "HUMBE",
+    title: "fantas",
+    startTime: 91,
     songUrl:
-      "https://open.spotify.com/track/0E0DRHf5PfMeor0ZCwB3oT?si=a998abd98a6047f2",
-    bg: "721B3A",
+      "https://open.spotify.com/track/4mmt6QpIOOn5ySzKWB6qOB?si=6350ef7e691c4ee6",
+    bg: "2B4D5B",
   },
   {
     audioSrc: "/songs/love-songs.mp3",

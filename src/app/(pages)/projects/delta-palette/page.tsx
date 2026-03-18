@@ -9,17 +9,22 @@ export default function DeltaPalette() {
       <div className="flex justify-between items-center">
         <Link
           href="/"
-          className="text-sm text-muted hover:text-zinc-400 transition-colors duration-150"
+          className="group text-sm text-muted hover:text-secondary transition-colors duration-100"
         >
-          <span className="mr-1">←</span>Back
+          <span className="mr-1">←</span>
+          <span className="underline decoration-transparent group-hover:decoration-current transition-colors duration-150">
+            Back
+          </span>
         </Link>
         <Link
           href="https://github.com/xxfmin/delta-palette"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-muted hover:text-zinc-400 transition-colors duration-150 flex items-center gap-1"
+          className="group text-sm text-muted hover:text-secondary transition-colors duration-100 flex items-center gap-1"
         >
-          Source
+          <span className="underline decoration-transparent group-hover:decoration-current transition-colors duration-150">
+            Source
+          </span>
           <LinkIcon size={14} />
         </Link>
       </div>
@@ -29,14 +34,14 @@ export default function DeltaPalette() {
           <h1 className="text-xl font-semibold text-foreground">
             Delta Palette
           </h1>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             A colorblind-focused accessibility tool that generates clearer, more
             inclusive color palettes by leveraging the perceptual uniformity of{" "}
             <Link
               href="https://bottosson.github.io/posts/oklab/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               Oklab
             </Link>{" "}
@@ -45,7 +50,7 @@ export default function DeltaPalette() {
               href="https://www.mathworks.com/matlabcentral/fileexchange/70215-maximally-distinct-color-generator"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               distance-maximization
             </Link>
@@ -66,13 +71,13 @@ export default function DeltaPalette() {
 
         <div className="space-y-4">
           <h2 className="section-title">The Idea</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             My mom has{" "}
             <Link
               href="https://www.color-blindness.com/deuteranopia-red-green-color-blindness/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               deuteranopia
             </Link>{" "}
@@ -107,7 +112,7 @@ export default function DeltaPalette() {
               <p className="text-center text-sm">How she sees it</p>
             </div>
           </div>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             <span className="text-foreground">Then I realized:</span> if I could
             generate palettes optimized for both normal vision and deuteranopia,
             I could try to make maps more usable.
@@ -116,19 +121,19 @@ export default function DeltaPalette() {
 
         <div className="space-y-4">
           <h2 className="section-title">The Science</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             When I set out to built this generator, I knew I had to figure out 3
             things:
           </p>
-          <ol className="list-decimal list-inside space-y-1">
+          <ol className="list-decimal list-inside space-y-1 text-[15px] font-medium text-muted tracking-tight">
             <li>A color space where numbers match perception</li>
             <li>A simulation of color vision deficiency (CVD)</li>
             <li>An optimization that keeps colors &quot;far apart&quot;</li>
           </ol>
 
           <div className="space-y-2 mt-8">
-            <p className="text-foreground/85 text-sm">Why Oklab?</p>
-            <p className="">
+            <p className="text-secondary text-sm">Why Oklab?</p>
+            <p className="text-[15px] font-medium text-muted tracking-tight">
               Oklab is a perceptual color space designed so that equal numerical
               moves correspond to equal perceived shifts in hue, chroma, or
               lightness. In sRGB, two colors with the same coordinate difference
@@ -140,17 +145,17 @@ export default function DeltaPalette() {
           </div>
 
           <div className="space-y-2 mt-8">
-            <p className="text-foreground/85 text-sm">
+            <p className="text-secondary text-sm">
               Simulating Color Vision Deficiency (CVD)
             </p>
-            <p className="">
+            <p className="text-[15px] font-medium text-muted tracking-tight">
               I recreated deuteranopia, and other forms of color-blindness by
               pairing{" "}
               <Link
                 href="https://culorijs.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:underline"
+                className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
               >
                 Culori
               </Link>
@@ -159,7 +164,7 @@ export default function DeltaPalette() {
                 href="https://github.com/skratchdot/color-blind"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:underline"
+                className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
               >
                 color-blind
               </Link>{" "}
@@ -169,8 +174,8 @@ export default function DeltaPalette() {
           </div>
 
           <div className="space-y-2 mt-8">
-            <p className="text-foreground/85 text-sm">Maximin Optimization</p>
-            <p className="">
+            <p className="text-secondary text-sm">Maximin Optimization</p>
+            <p className="text-[15px] font-medium text-muted tracking-tight">
               Instead of simply spreading colors evenly, I pose a
               &quot;maximin&quot; problem: pick n points in Oklab such that the
               smallest pairwise distance, checked under both true-color and
@@ -183,12 +188,12 @@ export default function DeltaPalette() {
 
         <div className="space-y-4">
           <h2 className="section-title">Results</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             The objective was to test whether a Delta Palette-generated color
             set improves route separability for users with deuteranopia compared
             with the standard NYC subway colors.
           </p>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             Here&apos;s how the map looks after applying a 12-color palette
             generated by my code:
           </p>
@@ -218,7 +223,7 @@ export default function DeltaPalette() {
               <p className="text-center text-sm">How she sees it</p>
             </div>
           </div>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             In the simulated view, red/green trunk lines previously merged into
             a single olive tone. The new palette separates them into distinct
             steel-blue and dusty-green.
@@ -242,26 +247,26 @@ export default function DeltaPalette() {
 
         <div className="space-y-4">
           <h2 className="section-title">Final Thoughts</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             My primary motivation was improving transit-map legibility for users
             with deuteranopia. But the generator can be applied to other
             contexts where color separability is important. By ensuring each hue
             is maximally distinct in both normal vision and CVD simulations, we
             can make visualizations and interfaces more accessible.
           </p>
-          <p className="text-foreground/85 text-sm mt-6">
+          <p className="text-secondary text-sm mt-6">
             Other Potential Applications:
           </p>
-          <ul className="list-disc list-inside space-y-2 text-secondary">
+          <ul className="list-disc list-inside space-y-2 text-[15px] font-medium text-muted tracking-tight">
             <li>
-              <span className="text-foreground/85">Educational Materials:</span>{" "}
+              <span className="text-secondary">Educational Materials:</span>{" "}
               Diagrams, instructional posters, or textbooks often use colored
               regions to convey meaning; optimizing those colors can help
               students with partial color blindness follow along without
               confusion.
             </li>
             <li>
-              <span className="text-foreground/85">
+              <span className="text-secondary">
                 UI Theming &amp; Design Systems:
               </span>{" "}
               Any design system that relies on color coding (buttons, alerts,
@@ -269,7 +274,7 @@ export default function DeltaPalette() {
               interactive elements remain clear for all users.
             </li>
             <li>
-              <span className="text-foreground/85">
+              <span className="text-secondary">
                 Building Floorplans &amp; Evacuation Routes:
               </span>{" "}
               Emergency signage or interactive floorplans that rely on multiple

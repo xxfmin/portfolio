@@ -8,17 +8,22 @@ export default function Sous() {
       <div className="flex justify-between items-center">
         <Link
           href="/"
-          className="text-sm text-muted hover:text-zinc-400 transition-colors duration-150"
+          className="group text-sm text-muted hover:text-secondary transition-colors duration-100"
         >
-          <span className="mr-1">←</span>Back
+          <span className="mr-1">←</span>
+          <span className="underline decoration-transparent group-hover:decoration-current transition-colors duration-150">
+            Back
+          </span>
         </Link>
         <Link
           href="https://github.com/xxfmin/sous"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-muted hover:text-zinc-400 transition-colors duration-150 flex items-center gap-1"
+          className="group text-sm text-muted hover:text-secondary transition-colors duration-100 flex items-center gap-1"
         >
-          Source
+          <span className="underline decoration-transparent group-hover:decoration-current transition-colors duration-150">
+            Source
+          </span>
           <LinkIcon size={14} />
         </Link>
       </div>
@@ -26,12 +31,12 @@ export default function Sous() {
       <div className="space-y-16 sm:space-y-20 text-secondary">
         <div className="space-y-4">
           <h1 className="text-xl font-semibold text-foreground">Sous</h1>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             A multi-agent AI system that orchestrates vision and natural
             language processing agents, enabling context-aware input routing and
             structured output validation for personalized recipe discovery.
           </p>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             Upload a photo of your fridge and it will identify your ingredients,
             intelligently format them, and find recipes that match what you
             already have.
@@ -40,21 +45,21 @@ export default function Sous() {
 
         <div className="space-y-4">
           <h2 className="section-title">Multi-Agent Architecture</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             The core design of Sous is its multi-agent orchestration system
             built with{" "}
             <Link
               href="https://ai.pydantic.dev/agents/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               Pydantic AI
             </Link>
             . Rather than a monolithic AI attempting to handle everything, I
             implemented specialized agents that each excel at specific tasks.
           </p>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             The orchestrator agent serves as the systems brain, implementing
             intelligent intent classification to route requests to the
             appropriate specialized agent. It uses LLM-based classification with
@@ -66,14 +71,14 @@ export default function Sous() {
 
         <div className="space-y-4">
           <h2 className="section-title">Fridge Agent</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             The Fridge Agent handles the complete computer vision workflow.
             Using{" "}
             <Link
               href="https://cloud.google.com/vision"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               Google&apos;s Vision AI
             </Link>
@@ -97,7 +102,7 @@ export default function Sous() {
 
         <div className="space-y-4">
           <h2 className="section-title">Recipe Agent</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             This agent specializes in natural language query processing. It
             extracts structured parameters from user queries like &quot;quick
             pasta recipes under 30 minutes&quot; and maps them to the
@@ -119,7 +124,7 @@ export default function Sous() {
 
         <div className="space-y-4">
           <h2 className="section-title">Q&amp;A Agent</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             A general-purpose agent for cooking questions that don&apos;t fit
             into the other categories. It provides context-aware answers to
             questions about techniques, substitutions, and general culinary
@@ -140,13 +145,13 @@ export default function Sous() {
 
         <div className="space-y-4">
           <h2 className="section-title">Stateful Workflow Management</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             One of the key technical challenges was managing state across
             multiple asynchronous operations. I implemented a dependency
             injection pattern using a &quot;Deps&quot; dataclass that maintains
             workflow state:
           </p>
-          <ol className="list-decimal list-inside space-y-1">
+          <ol className="list-decimal list-inside space-y-1 text-[15px] font-medium text-muted tracking-tight">
             <li>Image data and extraction results</li>
             <li>Formatted ingredients optimized for search</li>
             <li>Search results and enhanced recipe details</li>
@@ -154,10 +159,10 @@ export default function Sous() {
           </ol>
 
           <div className="space-y-2 mt-8">
-            <p className="text-foreground/85 text-sm">
+            <p className="text-secondary text-sm">
               Progressive State Accumulation
             </p>
-            <p className="">
+            <p className="text-[15px] font-medium text-muted tracking-tight">
               Each agent step builds on the previous one&apos;s results, stored
               in the shared dependency context. This pattern enables clean
               separation of concerns, testable components, and error recovery at
@@ -167,10 +172,10 @@ export default function Sous() {
           </div>
 
           <div className="space-y-2 mt-8">
-            <p className="text-foreground/85 text-sm">
+            <p className="text-secondary text-sm">
               Dependency Injection Benefits
             </p>
-            <p className="">
+            <p className="text-[15px] font-medium text-muted tracking-tight">
               By using dependency injection, services are instantiated lazily
               and reused throughout the workflow. API clients are created once
               and maintained for the request lifecycle, improving performance
@@ -182,7 +187,7 @@ export default function Sous() {
 
         <div className="space-y-4">
           <h2 className="section-title">Dashboard</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             I think 35% of my time spent on this project was trying to make this
             bento grid look cool lol
           </p>

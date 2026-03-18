@@ -8,17 +8,22 @@ export default function MCPDocServer() {
       <div className="flex justify-between items-center">
         <Link
           href="/"
-          className="text-sm text-muted hover:text-zinc-400 transition-colors duration-150"
+          className="group text-sm text-muted hover:text-secondary transition-colors duration-100"
         >
-          <span className="mr-1">←</span>Back
+          <span className="mr-1">←</span>
+          <span className="underline decoration-transparent group-hover:decoration-current transition-colors duration-150">
+            Back
+          </span>
         </Link>
         <Link
           href="https://github.com/xxfmin/mcp-documentation-server"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-muted hover:text-zinc-400 transition-colors duration-150 flex items-center gap-1"
+          className="group text-sm text-muted hover:text-secondary transition-colors duration-100 flex items-center gap-1"
         >
-          Source
+          <span className="underline decoration-transparent group-hover:decoration-current transition-colors duration-150">
+            Source
+          </span>
           <LinkIcon size={14} />
         </Link>
       </div>
@@ -28,12 +33,12 @@ export default function MCPDocServer() {
           <h1 className="text-xl font-semibold text-foreground">
             MCP Doc Server
           </h1>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             An MCP server that indexes documents into collections, extracts and
             chunks content, generates embeddings, and stores them in a vector
             database for semantic and hybrid search. Everything runs locally.
           </p>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             I built this for personal use so LLMs can better understand my
             project docs and requirements, and assist with deep,
             project-specific development tasks.
@@ -42,21 +47,21 @@ export default function MCPDocServer() {
 
         <div className="space-y-4">
           <h2 className="section-title">Document Indexing & Management</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             The system indexes documents from URLs or local files in PDF, HTML,
             Markdown, and DOCX using{" "}
             <Link
               href="https://github.com/docling-project/docling"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               Docling
             </Link>
             . Documents are organized into collections with custom chunking
             parameters.
           </p>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             The indexing pipeline uses parallel processing for large documents
             and intelligent chunking with configurable size and overlap.
           </p>
@@ -78,13 +83,13 @@ export default function MCPDocServer() {
 
         <div className="space-y-4">
           <h2 className="section-title">Semantic Search</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             Search uses vector similarity with{" "}
             <Link
               href="https://huggingface.co/Qwen/Qwen3-Embedding-0.6B"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               Qwen/Qwen3-Embedding-0.6B
             </Link>{" "}
@@ -92,7 +97,7 @@ export default function MCPDocServer() {
             can be reranked using keyword boost, length penalty, and position
             boost.
           </p>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             The system supports context windows to retrieve surrounding chunks,
             enables searching within specific documents or collections, and
             returns metadata such as page numbers, sections, and headings.
@@ -115,13 +120,13 @@ export default function MCPDocServer() {
 
         <div className="space-y-4">
           <h2 className="section-title">Local-First Architecture</h2>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             Everything runs on your machine. The Python{" "}
             <Link
               href="https://gofastmcp.com/getting-started/welcome"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               FastMCP
             </Link>{" "}
@@ -130,7 +135,7 @@ export default function MCPDocServer() {
               href="https://lancedb.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               LanceDB
             </Link>{" "}
@@ -139,19 +144,19 @@ export default function MCPDocServer() {
               href="https://sqlite.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               SQLite
             </Link>{" "}
             manages metadata.
           </p>
-          <p className="">
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             The embedding model is downloaded from{" "}
             <Link
               href="https://huggingface.co/Qwen/Qwen3-Embedding-0.6B"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:underline"
+              className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
             >
               HuggingFace
             </Link>{" "}
@@ -162,12 +167,12 @@ export default function MCPDocServer() {
         </div>
 
         <div className="space-y-4">
-          <h2 className="section-title">Advanced Features</h2>
-          <p className="">
+          <h2 className="section-title">Features</h2>
+          <p className="text-[15px] font-medium text-muted tracking-tight">
             Building an efficient document indexing system required solving
             several performance and reliability challenges:
           </p>
-          <ol className="list-decimal list-inside space-y-1 ">
+          <ol className="list-decimal list-inside space-y-1 text-[15px] font-medium text-muted tracking-tight">
             <li>Reducing redundant embedding computations</li>
             <li>Handling large documents without memory issues</li>
             <li>
@@ -176,8 +181,8 @@ export default function MCPDocServer() {
           </ol>
 
           <div className="space-y-2 mt-8">
-            <p className="text-foreground/85 text-sm">LRU Embedding Cache</p>
-            <p className="">
+            <p className="text-secondary text-sm">LRU Embedding Cache</p>
+            <p className="text-[15px] font-medium text-muted tracking-tight">
               I implemented an LRU cache that stores embeddings keyed by text
               content hashes. When the same or similar content appears (like
               repeated headers or boilerplate), the system retrieves the cached
@@ -188,17 +193,17 @@ export default function MCPDocServer() {
           </div>
 
           <div className="space-y-2 mt-8">
-            <p className="text-foreground/85 text-sm">
+            <p className="text-secondary text-sm">
               Parallel Chunking Architecture
             </p>
-            <p className="">
+            <p className="text-[15px] font-medium text-muted tracking-tight">
               Large documents can generate hundreds or thousands of chunks. I
               built a parallel chunking system using Python&apos;s{" "}
               <Link
                 href="https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:underline"
+                className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
               >
                 ThreadPoolExecutor
               </Link>{" "}
@@ -209,17 +214,17 @@ export default function MCPDocServer() {
           </div>
 
           <div className="space-y-2 mt-8">
-            <p className="text-foreground/85 text-sm">
+            <p className="text-secondary text-sm">
               Structural Metadata Extraction
             </p>
-            <p className="">
+            <p className="text-[15px] font-medium text-muted tracking-tight">
               Beyond just text, the system extracts rich structural information
               using{" "}
               <Link
                 href="https://github.com/docling-project/docling"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:underline"
+                className="text-[15px] font-medium text-secondary hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300"
               >
                 Docling
               </Link>

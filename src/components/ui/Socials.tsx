@@ -101,7 +101,7 @@ export function Socials() {
             href={social.url}
             target={isMail ? undefined : "_blank"}
             rel={isMail ? undefined : "noopener noreferrer"}
-            className="flex items-center gap-3 rounded-full text-sm font-medium text-muted hover:text-secondary transition-colors duration-100"
+            className="flex items-center gap-3 rounded-full text-sm font-medium text-muted/70 hover:text-muted transition-colors duration-300"
           >
             <IconComponent size={social.iconSize} />
           </Link>

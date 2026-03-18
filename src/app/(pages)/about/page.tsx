@@ -8,35 +8,26 @@ import { Music } from "@/components/Music";
 
 export default function About() {
   return (
-    <StaggeredContainer className="space-y-8">
+    <StaggeredContainer className="space-y-10">
       <Link
         href="/"
-        className="text-sm text-muted hover:text-zinc-400 transition-colors duration-150"
+        className="group text-sm text-muted hover:text-secondary transition-colors duration-100"
       >
-        <span className="mr-1">←</span>Back
+        <span className="mr-1">←</span>
+        <span className="underline decoration-transparent group-hover:decoration-current transition-colors duration-150">
+          Back
+        </span>
       </Link>
 
-      <div className="space-y-16 sm:space-y-20">
-        <div className="space-y-5 leading-relaxed text-secondary">
-          <p>
-            <span className="text-foreground mr-1">
-              Hi, I&apos;m Felipe 👋{" "}
-            </span>
-            I got into this path by tinkering with things like installing
-            Minecraft mods and jailbreaking my phone during my childhood. I
-            loved pushing past defaults and exploring what could be improved.
-          </p>
-          <p>
-            Currently, I&apos;m drawn to internal tools, workflows, and smart
-            automation. The kind of stuff that quietly powers real work behind
-            the scenes.
-          </p>
-        </div>
-
+      <div className="pt-6 sm:pt-10">
         <Interests />
+      </div>
 
+      <div className="pt-6 sm:pt-10">
         <Music />
+      </div>
 
+      <div className="pt-6 sm:pt-10">
         <Traveling />
       </div>
     </StaggeredContainer>

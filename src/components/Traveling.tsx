@@ -5,12 +5,7 @@ export function Traveling() {
     <div className="space-y-8">
       <div className="space-y-3">
         <h2 className="section-title">Traveling</h2>
-        <p className="text-secondary">
-          Born in Brazil with South Korean roots, I&apos;ve always lived at the
-          intersection of vibrant cultures. Moving to Florida at a young age
-          expanded my worldview and deepened my appreciation for new people,
-          ideas, and ways of thinking.
-        </p>
+        
       </div>
 
       <div className="space-y-3.5">
