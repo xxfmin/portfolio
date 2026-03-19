@@ -18,7 +18,7 @@ export default function UCFSpots() {
         </Link>
         <div className="flex flex-row gap-6">
           <Link
-            href="https://github.com/xxfmin/ucf-spots"
+            href="https://www.ucfspots.com"
             target="_blank"
             rel="noopener noreferrer"
             className="group text-sm text-muted hover:text-secondary transition-colors duration-100 flex items-center gap-1"
@@ -29,7 +29,7 @@ export default function UCFSpots() {
             <Globe size={14} />
           </Link>
           <Link
-            href="https://github.com/xxfmin/ucf-spots"
+            href="https://www.github.com/xxfmin/ucf-spots"
             target="_blank"
             rel="noopener noreferrer"
             className="group text-sm text-muted hover:text-secondary transition-colors duration-100 flex items-center gap-1"
