@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import Link from "next/link";
 import { StaggeredContainer } from "@/components/ui/StaggeredContainer";
 import { Socials } from "@/components/ui/Socials";
+import BatCat from "@/components/ui/BatCat";
 
 export default function Home() {
   return (
@@ -36,16 +37,10 @@ export default function Home() {
         <div className="flex flex-row items-center">
           <Link
             href={"/about"}
-            className="flex flex-row items-center gap-1 group"
+            className="flex flex-row items-center gap-1.5 group"
           >
-            <Image
-              src="/icons/yellow-folder.png"
-              alt="about"
-              width={24}
-              height={24}
-              className="rounded-sm h-5 w-5"
-            />
-            <span className="text-[15px] font-medium font-manrope text-secondary group-hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 group-hover:after:opacity-150 after:transition-opacity after:duration-300">
+            <BatCat size={20} />
+            <span className="text-[14px] font-semibold font-manrope text-secondary group-hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 group-hover:after:opacity-150 after:transition-opacity after:duration-300">
               About me
             </span>
           </Link>
