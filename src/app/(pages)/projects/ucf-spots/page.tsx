@@ -66,7 +66,7 @@ export default function UCFSpots() {
           <div className="relative flex-1 overflow-hidden rounded space-y-2 mt-8">
             <div className="relative overflow-hidden rounded-xl">
               <Image
-                src="/projects/ucf-spots/home.png"
+                src="/projects/ucf-spots/home.webp"
                 alt="ucfSpots"
                 width={800}
                 height={600}

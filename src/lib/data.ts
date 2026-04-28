@@ -2,7 +2,6 @@ export interface ExperienceProps {
   company: string;
   title: string;
   date: string;
-  logo: string;
   companyUrl: string;
 }
 
@@ -11,28 +10,24 @@ export const experiences: ExperienceProps[] = [
     company: "JPMorganChase",
     title: "Software Engineer",
     date: "Incoming",
-    logo: "/logos/jpmc.jpeg",
     companyUrl: "https://www.jpmorganchase.com",
   },
   {
     company: "Intel",
     title: "Software Engineer Intern",
     date: "May — Aug 2024",
-    logo: "/logos/intel.jpeg",
     companyUrl: "https://www.intel.com",
   },
   {
     company: "Intel",
     title: "Machine Learning Engineer Intern",
     date: "May — Aug 2023",
-    logo: "/logos/intel.jpeg",
     companyUrl: "https://www.intel.com",
   },
   {
     company: "Accenture",
     title: "Solutions Architect Intern",
     date: "Sep — Dec 2022",
-    logo: "/logos/accenture.jpeg",
     companyUrl: "https://www.accenture.com",
   },
 ];
@@ -83,7 +78,7 @@ export interface Song {
 export const songs: Song[] = [
   {
     audioSrc: "/songs/split.mp3",
-    coverImage: "/songs/split-cover.jpeg",
+    coverImage: "/songs/split.webp",
     artist: "88rising, NIKI",
     title: "Split",
     startTime: 0.25,
@@ -93,7 +88,7 @@ export const songs: Song[] = [
   },
   {
     audioSrc: "/songs/the-dress.mp3",
-    coverImage: "/songs/the-dress.jpeg",
+    coverImage: "/songs/the-dress.webp",
     artist: "Dijon",
     title: "The Dress",
     startTime: 0,
@@ -103,7 +98,7 @@ export const songs: Song[] = [
   },
   {
     audioSrc: "/songs/fantasmas.mp3",
-    coverImage: "/songs/fantasmas.jpeg",
+    coverImage: "/songs/fantasmas.webp",
     artist: "HUMBE",
     title: "fantasmas",
     startTime: 91,
@@ -113,7 +108,7 @@ export const songs: Song[] = [
   },
   {
     audioSrc: "/songs/love-songs.mp3",
-    coverImage: "/songs/love-songs-cover.jpeg",
+    coverImage: "/songs/love-songs.webp",
     artist: "Prospa, Kosmo Kint",
     title: "Love Songs",
     startTime: 22.5,
