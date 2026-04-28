@@ -105,7 +105,7 @@ export const songs: Song[] = [
     audioSrc: "/songs/fantasmas.mp3",
     coverImage: "/songs/fantasmas.jpeg",
     artist: "HUMBE",
-    title: "fantas",
+    title: "fantasmas",
     startTime: 91,
     songUrl:
       "https://open.spotify.com/track/4mmt6QpIOOn5ySzKWB6qOB?si=6350ef7e691c4ee6",
