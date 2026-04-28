@@ -19,7 +19,7 @@ export default function Home() {
         <p className="text-[15px] font-medium text-muted tracking-tight">
           Hi, I&apos;m Felipe
           <Image
-            src="/icons/waving.png"
+            src="/icons/waving.webp"
             alt="waving"
             width={20}
             height={20}

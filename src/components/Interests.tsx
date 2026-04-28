@@ -8,7 +8,7 @@ export function Interests() {
         <p className="text-[15px] font-medium text-muted tracking-tight">
           Born in
           <Image
-            src="/icons/brazil.png"
+            src="/icons/brazil.webp"
             alt="Brazil flag"
             width={18}
             height={18}
@@ -16,7 +16,7 @@ export function Interests() {
           />
           with
           <Image
-            src="/icons/south-korea.png"
+            src="/icons/south-korea.webp"
             alt="South Korea flag"
             width={18}
             height={18}
