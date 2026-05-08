@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <StaggeredContainer className="space-y-8">
       <div className="flex flex-row justify-between items-center">
-        <h1 className="text-4xl font-bold font-korean tracking-wide">민영기</h1>
+        <h1 className="text-4xl font-bold font-korean tracking-wide text-balance">민영기</h1>
         <Socials />
       </div>
 
       <div className="space-y-5">
-        <p className="text-[15px] font-medium text-muted tracking-tight">
+        <p className="text-[15px] font-medium text-muted tracking-tight text-pretty">
           Hi, I&apos;m Felipe
           <Image
             src="/icons/waving.webp"
@@ -29,7 +29,7 @@ export default function Home() {
           Minecraft mods and jailbreaking my phone during my childhood. I loved
           pushing past defaults and exploring what could be improved.
         </p>
-        <p className="text-[15px] font-medium text-muted tracking-tight">
+        <p className="text-[15px] font-medium text-muted tracking-tight text-pretty">
           I&apos;m driven by curiosity and a love for creating thoughtful,
           useful things. I&apos;ve pursued that across internships, academic
           research, hackathons, and personal projects.
@@ -37,7 +37,7 @@ export default function Home() {
         <div className="flex flex-row items-center">
           <Link
             href={"/about"}
-            className="flex flex-row items-center gap-1.5 group"
+            className="flex flex-row items-center gap-1.5 group py-2 active:scale-[0.96] transition-transform"
           >
             <BatCat size={20} />
             <span className="text-[14px] font-semibold font-manrope text-secondary group-hover:text-foreground/93 transition-colors tracking-tight relative after:absolute after:bottom-0.5 after:left-0 after:h-px after:w-full after:bg-foreground/93 after:opacity-0 group-hover:after:opacity-150 after:transition-opacity after:duration-300">

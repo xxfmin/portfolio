@@ -34,7 +34,7 @@
   }
 
   .section-title {
-    @apply text-xs font-mono tracking-widest text-muted font-medium uppercase;
+    @apply text-xs font-mono tracking-widest text-muted font-medium uppercase text-balance;
   }
 }
 

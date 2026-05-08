@@ -138,7 +138,7 @@ export default function BatCat({ size = 96 }: BatCatProps) {
           cx="90"
           cy="90"
           r="90"
-          className="fill-secondary group-hover:fill-foreground/93 transition-colors"
+          className="fill-secondary group-hover:fill-foreground/93 transition-[fill]"
         />
         <path
           id="left-ear"

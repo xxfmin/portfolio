@@ -5,7 +5,7 @@ export function Interests() {
     <div className="space-y-6">
       <div className="space-y-5">
         {/* <h2 className="section-title">Beyond Tech</h2> */}
-        <p className="text-[15px] font-medium text-muted tracking-tight">
+        <p className="text-[15px] font-medium text-muted tracking-tight text-pretty">
           Born in
           <Image
             src="/icons/brazil.webp"
@@ -27,7 +27,7 @@ export function Interests() {
           appreciation for new people, ideas, and ways of thinking.
         </p>
 
-        <p className="text-[15px] font-medium text-muted tracking-tight">
+        <p className="text-[15px] font-medium text-muted tracking-tight text-pretty">
           Outside of tech, I&apos;m into traveling, trying new food spots{" "}
           <span className="text-muted/60">(especially jasmine tea)</span>, rock
           climbing, and poker. Whether I&apos;m coding or not, I&apos;m always

@@ -11,13 +11,13 @@ export default function Projects() {
           <Link
             key={project.slug}
             href={`/projects/${project.slug}`}
-            className="group relative flex flex-col gap-1.5 hover:bg-card -mx-3 px-3 py-2 rounded-lg transition-colors duration-300 cursor-pointer"
+            className="group relative flex flex-col gap-1.5 hover:bg-card -mx-3 px-3 py-3 rounded-lg transition-[color,background-color,transform] duration-300 cursor-pointer active:scale-[0.99]"
           >
             <ArrowUpRight className="absolute top-2 right-2 size-4 text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-450" />
             <span className="text-[15px] font-medium text-foreground tracking-tight">
               {project.title}
             </span>
-            <span className="text-[15px] font-medium text-muted tracking-tight">
+            <span className="text-[15px] font-medium text-muted tracking-tight text-pretty">
               {project.description}
             </span>
           </Link>
