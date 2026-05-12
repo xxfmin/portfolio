@@ -21,7 +21,7 @@ export default function MiraiArcade() {
 
       <div className="space-y-16 sm:space-y-20 text-secondary">
         <div className="space-y-4">
-          <h1 className="text-xl font-semibold text-foreground flex items-center">
+          <h1 className="text-lg sm:text-xl font-semibold text-foreground flex items-center">
             <Image
               src="/icons/mirai.webp"
               alt="Mirai Arcade"
