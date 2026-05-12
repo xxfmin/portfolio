@@ -91,7 +91,7 @@ export function Socials() {
   ];
 
   return (
-    <div className="flex flex-row gap-3 items-center">
+    <div className="flex flex-row gap-1 items-center">
       {socialLinks.map((social) => {
         const IconComponent = social.icon;
         const isMail = social.name === "Mail";
