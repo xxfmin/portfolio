@@ -1,5 +1,6 @@
 import { StaggeredContainer } from "@/components/ui/StaggeredContainer";
 import Link from "next/link";
+import { Link as LinkIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function DeltaPalette() {
