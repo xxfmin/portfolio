@@ -34,6 +34,8 @@ export const experiences: ExperienceProps[] = [
 
 export interface ProjectProps {
   title: string;
+  titleIcon?: string;
+  titleSuffix?: string;
   description: string;
   slug: string;
 }
@@ -44,6 +46,14 @@ export const projects: ProjectProps[] = [
     description:
       "Live classroom availability for UCF students to find open study spots across campus. Reached 3,500+ users in the first month.",
     slug: "ucf-spots",
+  },
+  {
+    title: "Mirai Arcade's Inventory Management System",
+    titleIcon: "/icons/mirai.webp",
+    titleSuffix: "'s Inventory Management System",
+    description:
+      "Inventory platform with microservices architecture, Kafka event streaming, and demand forecasting. Finalist at the UCF Senior Design showcase.",
+    slug: "mirai-arcade",
   },
   {
     title: "MCP Doc Server",
