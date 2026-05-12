@@ -1,6 +1,5 @@
 import { StaggeredContainer } from "@/components/ui/StaggeredContainer";
 import Link from "next/link";
-import { Link as LinkIcon } from "lucide-react";
 import Image from "next/image";
 
 export default function DeltaPalette() {
@@ -234,12 +233,12 @@ export default function DeltaPalette() {
               Testing results with my friend with color vision deficiency:
             </p>
             <div className="relative w-full aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/cG8QBCUJcv0"
-                title="Testing Delta Palette with Sunny :)"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full rounded-lg"
+              <video
+                src="/projects/delta-palette/demo.mp4#t=0.001"
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-auto block"
               />
             </div>
           </div>
