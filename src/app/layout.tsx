@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({
           </div>
         </SmoothScroll>
         <Analytics />
+        <SpeedInsights />
         <GoogleAnalytics gaId="G-0X9X458532" />
       </body>
     </html>
